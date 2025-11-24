@@ -1,8 +1,8 @@
 # Dependencies
 /node_modules
 
-# Build directory
-/build
+# Vite build directory
+/dist
 
 # Log files
 npm-debug.log*

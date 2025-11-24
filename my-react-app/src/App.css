@@ -11,6 +11,13 @@
   animation: fadeIn 1.5s ease-in-out;
   padding: 10px 10px; /* Add padding around the content */
 }
+button {
+  background-color: blue;
+  padding: 10px;
+}
+button {
+  background-color: red; /* This should override the blue */
+}
 
 /* Header styling */
 header {

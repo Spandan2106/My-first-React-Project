@@ -1,0 +1,175 @@
+/* Container styling */
+.container {
+  min-height: 100vh; /* Ensure it takes at least full viewport height */
+  width: 100%; /* Take full width of its parent */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute space between header, main, and footer */
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #1e1e2f, #2a2a40); /* Stylish dark gradient background */
+  animation: fadeIn 1.5s ease-in-out;
+  padding: 10px 10px; /* Add padding around the content */
+}
+
+/* Header styling */
+header {
+  margin-bottom: 10px; /* Space after the header */
+  width: 100%; /* Allow header to take full width for text-align: center to work */
+}
+
+/* Main content styling */
+main {
+  flex-grow: 1; /* Allow main content to take up available space */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center main content horizontally */
+  width: 100%;
+  max-width: 800px; /* Limit width for readability */
+  padding-bottom: 40px; /* Space before the footer */
+}
+
+/* Title styling */
+.title {
+  font-size: 5rem;
+  font-weight: 400;
+  background: linear-gradient(45deg, #646cff, #00d8ff, #00ffa3); /* Multi-color gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+  letter-spacing: 1.5px;
+  animation: slideDown 0.8s ease-out;
+  transition: transform 0.1s ease, text-shadow 0s ease;
+}
+
+.title:hover {
+  transform: scale(1.5);
+  text-shadow: 0px 4px 20px rgba(100, 108, 255, 0.6);
+}
+
+/* Subtitle styling */
+.subtitle {
+  font-size: 1.5rem;
+  color: #bbb;
+  margin-top: 1.5rem;
+  opacity: 0;
+  animation: fadeInUp 2s ease forwards;
+  animation-delay: 1s;
+  transition: color 0.3s ease;
+}
+
+.subtitle:hover {
+  color: #00d8ff;
+}
+
+.description {
+  margin-top: 2.5rem; /* Space above the first description paragraph */
+  margin-bottom: 20px; /* Space between paragraphs */
+  font-size: 1rem;
+  color: #fefdfd;
+  max-width: 1000px;
+  line-height: 2;
+}
+
+.large-section {
+  margin-top: 50px; /* Space above the large section */
+  padding: 10px;
+  background-color: #ffffff; /* Subtle background for the section */
+  border-radius: 100px;
+  width: 1000px;
+  max-width: 100%;
+}
+
+/* Specific styling for paragraphs within main */
+main p {
+  margin-bottom: 20px; /* Consistent spacing between paragraphs */
+}
+
+.large-title {
+  font-size: 3rem;
+  font-weight: 1000;
+  background: linear-gradient(45deg, #ff6ec4, #7873f5, #4ade80); /* Vibrant gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+  letter-spacing: 3px;
+  animation: slideDown 1.2s ease-out;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+.large-title:hover {
+  transform: scale(1.05);
+  text-shadow: 0px 4px 20px rgba(255, 110, 196, 0.6);
+}
+
+.large.description {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: #aaa;
+  max-width: 1000px;
+  line-height: 1.6;
+}
+
+.large-title:hover {
+  color: #ff6ec4;
+}
+
+.footer {
+  position:bottom;
+  bottom: 100px;
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  color: #fbf4f4;
+}
+.footer a {
+  color: #3c43be;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer a:hover {
+  color: #535bf2;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide-down animation for title */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade-in-up animation for subtitle */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 600px) {
+  .title {
+    font-size: 3rem;
+  }
+  .subtitle {
+    font-size: 1.2rem;
+  }
+}
